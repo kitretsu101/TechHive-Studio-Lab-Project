@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="20.0" styleClass="content-area" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label styleClass="header-label" text="Our Services" />
+      <VBox spacing="10.0" styleClass="card">
+         <children>
+            <Label styleClass="card-title" text="Design Focus" />
+            <Label styleClass="card-text" text="Dedicated service for UI/UX Design for websites and applications." wrapText="true" />
+         </children>
+      </VBox>
+      <VBox spacing="10.0" styleClass="card">
+         <children>
+            <Label styleClass="card-title" text="Full-Stack Development" />
+            <Label styleClass="card-text" text="Complete development services using MERN Stack, Java, and SQL." wrapText="true" />
+         </children>
+      </VBox>
+      <VBox spacing="10.0" styleClass="card">
+         <children>
+            <Label styleClass="card-title" text="Support" />
+            <Label styleClass="card-text" text="Technical Consulting, Debugging Team, and long-term maintenance." wrapText="true" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
