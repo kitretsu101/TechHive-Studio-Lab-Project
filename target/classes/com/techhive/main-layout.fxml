@@ -9,7 +9,7 @@
    <left>
       <VBox prefWidth="250.0" styleClass="sidebar" BorderPane.alignment="CENTER">
          <children>
-            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #007bff; -fx-padding: 0 0 20 0;" text="TechHive" />
+            <Label text="TechHive" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showHome" styleClass="nav-button" text="Home" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showServices" styleClass="nav-button" text="Services" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showPortfolio" styleClass="nav-button" text="Portfolio" />

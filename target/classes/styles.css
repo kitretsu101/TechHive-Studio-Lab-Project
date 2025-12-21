@@ -1,79 +1,141 @@
 .root {
-    -fx-base: #f4f6f8;
-    -fx-background-color: #f4f6f8;
-    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-base: #f0f2f5;
+    -fx-background-color: #f0f2f5;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
 }
 
+/* Sidebar Styling */
 .sidebar {
-    -fx-background-color: #ffffff;
-    -fx-padding: 20;
-    -fx-spacing: 10;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+    -fx-background-color: #132440;
+    /* Deep Blue */
+    -fx-padding: 30 20;
+    -fx-spacing: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
 }
 
+.sidebar .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-padding: 0 0 30 0;
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Navigation Buttons */
 .nav-button {
     -fx-background-color: transparent;
-    -fx-text-fill: #333333;
+    -fx-text-fill: #a0aab5;
     -fx-font-size: 16px;
     -fx-alignment: CENTER_LEFT;
-    -fx-padding: 10 20;
+    -fx-padding: 12 25;
     -fx-cursor: hand;
-    -fx-background-radius: 5;
+    -fx-background-radius: 8;
+    -fx-border-width: 0 0 0 4;
+    -fx-border-color: transparent;
 }
 
 .nav-button:hover {
-    -fx-background-color: #e0e0e0;
-    -fx-text-fill: #000000;
-}
-
-.nav-button:selected {
-    -fx-background-color: #0056b3;
+    -fx-background-color: rgba(255, 255, 255, 0.05);
     -fx-text-fill: #ffffff;
 }
 
-.content-area {
-    -fx-padding: 30;
-    -fx-background-color: #f4f6f8;
+.nav-button:selected,
+.nav-button:focused {
+    -fx-background-color: rgba(59, 151, 151, 0.15);
+    /* #3B9797 with opacity */
+    -fx-text-fill: #3B9797;
+    /* Teal Accent */
+    -fx-border-color: #3B9797;
+    -fx-font-weight: bold;
 }
 
+/* Content Area */
+.content-area {
+    -fx-padding: 40;
+    -fx-background-color: #f0f2f5;
+}
+
+/* Headers */
 .header-label {
-    -fx-font-size: 32px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
+    -fx-font-size: 36px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #132440;
+    /* Deep Blue */
+    -fx-padding: 0 0 20 0;
 }
 
 .sub-header-label {
-    -fx-font-size: 24px;
-    -fx-text-fill: #555555;
+    -fx-font-size: 20px;
+    -fx-text-fill: #666666;
+    -fx-font-weight: normal;
 }
 
+/* Cards */
 .card {
     -fx-background-color: #ffffff;
-    -fx-background-radius: 10;
-    -fx-padding: 20;
-    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 5, 0, 0, 0);
+    -fx-background-radius: 12;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 15, 0, 0, 5);
+}
+
+.card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 151, 151, 0.2), 20, 0, 0, 8);
 }
 
 .card-title {
-    -fx-font-size: 18px;
+    -fx-font-size: 20px;
     -fx-font-weight: bold;
-    -fx-text-fill: #2c3e50;
+    -fx-text-fill: #132440;
 }
 
 .card-text {
-    -fx-font-size: 14px;
+    -fx-font-size: 15px;
     -fx-text-fill: #555555;
+    -fx-line-spacing: 4px;
 }
 
+/* Primary Buttons */
 .primary-button {
-    -fx-background-color: #0056b3;
+    -fx-background-color: #3B9797;
+    /* Teal Accent */
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-padding: 10 20;
-    -fx-background-radius: 5;
+    -fx-font-size: 15px;
+    -fx-padding: 12 30;
+    -fx-background-radius: 6;
     -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 151, 151, 0.4), 10, 0, 0, 4);
 }
 
 .primary-button:hover {
-    -fx-background-color: #004494;
+    -fx-background-color: #2f7a7a;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 151, 151, 0.6), 12, 0, 0, 5);
+}
+
+.primary-button:pressed {
+    -fx-background-color: #266363;
+    -fx-effect: none;
+}
+
+/* Input Fields */
+.text-field,
+.text-area,
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 6;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused,
+.text-area:focused,
+.combo-box:focused {
+    -fx-border-color: #3B9797;
+    -fx-effect: dropshadow(three-pass-box, rgba(59, 151, 151, 0.2), 5, 0, 0, 0);
+}
+
+.label {
+    -fx-text-fill: #333333;
 }

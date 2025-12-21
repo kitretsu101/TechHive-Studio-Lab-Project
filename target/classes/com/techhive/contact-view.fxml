@@ -16,11 +16,11 @@
    </padding>
    <children>
       <Label styleClass="header-label" text="Contact Us" />
-      <Label text="Name:" textFill="WHITE" />
+      <Label text="Name:" />
       <TextField fx:id="nameField" promptText="Your Name" />
-      <Label text="Email:" textFill="WHITE" />
+      <Label text="Email:" />
       <TextField fx:id="emailField" promptText="Your Email" />
-      <Label text="Service:" textFill="WHITE" />
+      <Label text="Service:" />
       <ComboBox fx:id="serviceBox" promptText="Select Service">
           <items>
               <FXCollections fx:factory="observableArrayList">
@@ -31,7 +31,7 @@
               </FXCollections>
           </items>
       </ComboBox>
-      <Label text="Message:" textFill="WHITE" />
+      <Label text="Message:" />
       <TextArea fx:id="messageArea" prefRowCount="5" promptText="Project Details..." />
       <Button mnemonicParsing="false" onAction="#handleSubmit" styleClass="primary-button" text="Submit Inquiry" />
       <Label fx:id="statusLabel" />
