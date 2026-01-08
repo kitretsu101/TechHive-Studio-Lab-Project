@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.techhive_studio_website_project_final.controller.ServicesController"
+            prefWidth="1200" prefHeight="800">
+
+    <top>
+        <fx:include source="components/Navbar.fxml"/>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: -fx-base;">
+            <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 80 40; -fx-background-color: -fx-base;">
+                
+                <!-- Hero -->
+                <VBox alignment="CENTER" spacing="15">
+                     <HBox alignment="CENTER">
+                        <Label text="Our Expertise" style="-fx-text-fill: -color-primary; -fx-background-color: rgba(0, 240, 255, 0.1); -fx-padding: 5 15; -fx-background-radius: 20; -fx-font-size: 12px;"/>
+                     </HBox>
+                    <Label text="Comprehensive Development Services" styleClass="h1"/>
+                    <Label text="From initial concept to ongoing maintenance, we provide end-to-end solutions." 
+                           styleClass="body-text" style="-fx-font-size: 18px; -fx-text-fill: -color-text-secondary;"/>
+                </VBox>
+
+                <!-- Service List -->
+                <VBox spacing="40" style="-fx-padding: 0 50; -fx-max-width: 1000;">
+                    
+                    <!-- Service 1: UI/UX -->
+                    <HBox spacing="40" styleClass="card" style="-fx-background-color: rgba(255,255,255,0.02); -fx-padding: 40;">
+                         <VBox spacing="20" maxWidth="400">
+                            <VBox styleClass="icon-box" alignment="CENTER_LEFT" style="-fx-padding: 0;">
+                                <Label text="🎨" style="-fx-font-size: 32px; -fx-text-fill: -color-primary;"/>
+                            </VBox>
+                            <Label text="UI/UX Design for Web &amp; Mobile" styleClass="h2" style="-fx-font-size: 24px;"/>
+                            <Label text="Create stunning, user-centric interfaces that drive engagement and conversions." 
+                                   styleClass="body-text" wrapText="true"/>
+                            <FlowPane hgap="10" vgap="10">
+                                <Label text="Figma" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                                <Label text="Adobe XD" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                                <Label text="Sketch" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                            </FlowPane>
+                         </VBox>
+                         
+                         <Region HBox.hgrow="ALWAYS"/>
+                         
+                         <VBox spacing="15" maxWidth="400">
+                             <Label text="What's Included:" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-primary;"/><Label text="User research and persona development" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-primary;"/><Label text="Wireframing and prototyping" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-primary;"/><Label text="Complete design systems" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-primary;"/><Label text="Mobile-first responsive design" styleClass="body-text"/></HBox>
+                         </VBox>
+                    </HBox>
+
+                    <!-- Service 2: Full Stack -->
+                    <HBox spacing="40" styleClass="card" style="-fx-background-color: rgba(255,255,255,0.02); -fx-padding: 40;">
+                         <VBox spacing="20" maxWidth="400">
+                            <VBox styleClass="icon-box" alignment="CENTER_LEFT" style="-fx-padding: 0;">
+                                <Label text="🦄" style="-fx-font-size: 32px; -fx-text-fill: -color-secondary;"/>
+                            </VBox>
+                            <Label text="Full-Stack Development" styleClass="h2" style="-fx-font-size: 24px;"/>
+                            <Label text="Build robust, scalable applications using cutting-edge technologies and best practices." 
+                                   styleClass="body-text" wrapText="true"/>
+                            <FlowPane hgap="10" vgap="10">
+                                <Label text="React" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                                <Label text="Node.js" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                                <Label text="Java" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                            </FlowPane>
+                         </VBox>
+                         
+                         <Region HBox.hgrow="ALWAYS"/>
+                         
+                         <VBox spacing="15" maxWidth="400">
+                             <Label text="What's Included:" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-secondary;"/><Label text="Custom web application development" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-secondary;"/><Label text="RESTful &amp; GraphQL API design" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-secondary;"/><Label text="Microservices architecture" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-secondary;"/><Label text="CI/CD pipeline setup" styleClass="body-text"/></HBox>
+                         </VBox>
+                    </HBox>
+                    
+                    <!-- Service 3: Database -->
+                     <HBox spacing="40" styleClass="card" style="-fx-background-color: rgba(255,255,255,0.02); -fx-padding: 40;">
+                         <VBox spacing="20" maxWidth="400">
+                            <VBox styleClass="icon-box" alignment="CENTER_LEFT" style="-fx-padding: 0;">
+                                <Label text="💾" style="-fx-font-size: 32px; -fx-text-fill: -color-accent;"/>
+                            </VBox>
+                            <Label text="Database Setup &amp; Management" styleClass="h2" style="-fx-font-size: 24px;"/>
+                            <Label text="Design and optimize database architectures for performance, scalability, and reliability." 
+                                   styleClass="body-text" wrapText="true"/>
+                            <FlowPane hgap="10" vgap="10">
+                                <Label text="PostgreSQL" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                                <Label text="MongoDB" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                                <Label text="Redis" style="-fx-background-color: rgba(255,255,255,0.1); -fx-padding: 5 10; -fx-background-radius: 4; -fx-text-fill: -color-text-secondary; -fx-font-size: 12px;"/>
+                            </FlowPane>
+                         </VBox>
+                         
+                         <Region HBox.hgrow="ALWAYS"/>
+                         
+                         <VBox spacing="15" maxWidth="400">
+                             <Label text="What's Included:" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-accent;"/><Label text="Database schema design" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-accent;"/><Label text="Query optimization" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-accent;"/><Label text="Data migration services" styleClass="body-text"/></HBox>
+                             <HBox spacing="10" alignment="CENTER_LEFT"><Label text="✓" style="-fx-text-fill: -color-accent;"/><Label text="Backup and recovery solutions" styleClass="body-text"/></HBox>
+                         </VBox>
+                    </HBox>
+
+                </VBox>
+
+                <!-- Hiring Options CTA -->
+                <VBox alignment="CENTER" spacing="30" style="-fx-padding: 60; -fx-background-color: linear-gradient(to right, #111625, #0d111c); -fx-background-radius: 20; -fx-max-width: 1000;">
+                    <Label text="Flexible Hiring Options" styleClass="h2"/>
+                    <Label text="Whether you need a complete product built from scratch or specific services to complement your existing team, we're here to help."
+                           styleClass="body-text" style="-fx-text-alignment: center; -fx-max-width: 600;" wrapText="true"/>
+                    
+                    <HBox spacing="30" alignment="CENTER">
+                         <Button text="Discuss Your Project" styleClass="button-primary"/>
+                    </HBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

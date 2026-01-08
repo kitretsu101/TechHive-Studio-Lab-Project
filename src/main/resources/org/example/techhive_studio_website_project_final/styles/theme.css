@@ -1,0 +1,195 @@
+/* TechHive Studio - Theme Configuration */
+.root {
+    /* Color Palette */
+    -fx-base: #0F1219;
+    /* Slightly softer dark */
+    /* Deep Navy Background -> Deep Slate Background */
+    -fx-background: #0F1219;
+
+    /* Brand Colors */
+    -color-primary: #38bdf8;
+    /* Sky Blue - softer neon */
+    -color-secondary: #818cf8;
+    /* Indigo - softer purple */
+    -color-accent: #f472b6;
+    /* Soft Pink */
+
+    /* Surface Colors */
+    -color-surface: #1A1F2E;
+    /* Richer slate for cards */
+    -color-surface-hover: #23293D;
+
+    /* Text Colors */
+    -color-text-primary: #E2E8F0;
+    /* Off-white, easier on eyes */
+    -color-text-secondary: #94A3B8;
+    /* Cool gray */
+
+    -color-text-muted: #64748B;
+
+    /* Gradients */
+    -gradient-primary: linear-gradient(to right, -color-secondary, -color-primary);
+    -gradient-surface: linear-gradient(to bottom right, #111625, #0d111c);
+
+    /* Font family - approximated to standard system fonts if custom not available */
+    -fx-font-family: 'Segoe UI', 'Roboto', 'Helvetica', sans-serif;
+}
+
+/* Global Styles */
+.root {
+    -fx-background-color: -fx-base;
+}
+
+.label {
+    -fx-text-fill: -color-text-primary;
+}
+
+.h1 {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text-primary;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 240, 255, 0.3), 10, 0, 0, 0);
+}
+
+.h2 {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text-primary;
+}
+
+.h3 {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text-primary;
+}
+
+.body-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-text-secondary;
+}
+
+/* Buttons */
+.button-primary {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 10 24;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 240, 255, 0.4), 10, 0, 0, 0);
+}
+
+.button-primary:hover {
+    -fx-background-color: derive(-color-primary, 20%);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 240, 255, 0.6), 15, 0, 0, 0);
+}
+
+.button-outline {
+    -fx-background-color: transparent;
+    -fx-border-color: -color-primary;
+    -fx-border-width: 2px;
+    -fx-border-radius: 4px;
+    -fx-text-fill: -color-primary;
+    -fx-font-weight: bold;
+    -fx-padding: 8 22;
+    -fx-cursor: hand;
+}
+
+.button-outline:hover {
+    -fx-background-color: rgba(0, 240, 255, 0.1);
+}
+
+/* Navbar */
+.navbar {
+    -fx-background-color: rgba(11, 15, 25, 0.95);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+}
+
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-text-secondary;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-text-fill: -color-text-primary;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: -color-surface;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 10, 0, 0, 4);
+    -fx-padding: 20;
+}
+
+.card:hover {
+    -fx-background-color: -color-surface-hover;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 240, 255, 0.1), 15, 0, 0, 4);
+}
+
+/* Animations Helper Classes */
+.hover-glow {
+    -fx-transition: all 0.3s;
+}
+
+/* Form Styles */
+.text-field,
+.text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-text-fill: white;
+    -fx-padding: 10;
+    -fx-prompt-text-fill: derive(-color-text-muted, -20%);
+}
+
+.text-field:focused,
+.text-area:focused {
+    -fx-border-color: -color-secondary;
+    -fx-background-color: rgba(112, 0, 255, 0.05);
+}
+
+.text-area .content {
+    -fx-background-color: transparent;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 2;
+}
+
+.combo-box:focused {
+    -fx-border-color: -color-secondary;
+}
+
+.combo-box .cell {
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: -fx-base;
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: -color-secondary;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: -fx-base;
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-box {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-padding: 15;
+    -fx-background-radius: 8px;
+}

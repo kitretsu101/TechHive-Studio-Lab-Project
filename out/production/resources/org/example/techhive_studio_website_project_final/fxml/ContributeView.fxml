@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.techhive_studio_website_project_final.controller.ContributeController"
+            prefWidth="1200" prefHeight="800">
+
+    <top>
+        <fx:include source="components/Navbar.fxml"/>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: -fx-base;">
+            <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 80 40; -fx-background-color: -fx-base;">
+                
+                <!-- Header -->
+                <VBox alignment="CENTER" spacing="15">
+                    <Label text="Collaborate With Us" styleClass="h1"/>
+                    <Label text="We're always looking for talented developers and designers to join our collaborative network." 
+                           styleClass="body-text" style="-fx-font-size: 18px; -fx-text-fill: -color-text-secondary;"/>
+                </VBox>
+                
+                <!-- Content Section -->
+                <HBox alignment="CENTER" spacing="80" style="-fx-padding: 40 0;">
+                    
+                    <!-- Left Column: Why Contribute? -->
+                    <VBox spacing="40" maxWidth="500">
+                        <Label text="Why Contribute?" styleClass="h2"/>
+                        
+                        <VBox spacing="20">
+                            <HBox spacing="15">
+                                <VBox styleClass="icon-box">
+                                     <Label text="👥" style="-fx-font-size: 20px; -fx-text-fill: -color-primary;"/>
+                                </VBox>
+                                <VBox spacing="5">
+                                    <Label text="Join a Dynamic Team" styleClass="h3" style="-fx-font-size: 18px;"/>
+                                    <Label text="Work alongside talented professionals on cutting-edge projects. Expand your network and learn from industry experts." styleClass="body-text" wrapText="true"/>
+                                </VBox>
+                            </HBox>
+                            
+                            <HBox spacing="15">
+                                <VBox styleClass="icon-box">
+                                     <Label text="🔮" style="-fx-font-size: 20px; -fx-text-fill: -color-secondary;"/>
+                                </VBox>
+                                <VBox spacing="5">
+                                    <Label text="Work on Exciting Projects" styleClass="h3" style="-fx-font-size: 18px;"/>
+                                    <Label text="Contribute to diverse, challenging projects across various industries. Build your portfolio with high quality work." styleClass="body-text" wrapText="true"/>
+                                </VBox>
+                            </HBox>
+                            
+                             <HBox spacing="15">
+                                <VBox styleClass="icon-box">
+                                     <Label text="🚀" style="-fx-font-size: 20px; -fx-text-fill: -color-accent;"/>
+                                </VBox>
+                                <VBox spacing="5">
+                                    <Label text="Flexible Opportunities" styleClass="h3" style="-fx-font-size: 18px;"/>
+                                    <Label text="Choose projects that match your interests and schedule. Work remotely on your own terms with competitive compensation." styleClass="body-text" wrapText="true"/>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+                        
+                        <VBox spacing="10" style="-fx-padding: 30; -fx-background-color: rgba(255,255,255,0.03); -fx-background-radius: 10;">
+                             <Label text="We're Looking For:" style="-fx-font-weight: bold; -fx-text-fill: white;"/>
+                             <Label text="✓ Full-Stack Developers" styleClass="body-text"/>
+                             <Label text="✓ Frontend Specialists" styleClass="body-text"/>
+                             <Label text="✓ Backend Engineers" styleClass="body-text"/>
+                             <Label text="✓ UI/UX Designers" styleClass="body-text"/>
+                             <Label text="✓ DevOps Engineers" styleClass="body-text"/>
+                             <Label text="✓ Database Architects" styleClass="body-text"/>
+                        </VBox>
+                    </VBox>
+
+                    <!-- Right Column: Apply Now Form -->
+                    <VBox spacing="20" maxWidth="500" styleClass="card" style="-fx-padding: 40; -fx-effect: dropshadow(three-pass-box, rgba(112, 0, 255, 0.2), 20, 0, 0, 0);">
+                        <Label text="Apply Now" styleClass="h2" style="-fx-font-size: 28px;"/>
+                        
+                        <VBox spacing="8">
+                            <Label text="Full Name *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <TextField fx:id="nameField" promptText="John Doe"/>
+                        </VBox>
+                        
+                        <VBox spacing="8">
+                            <Label text="Email Address *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <TextField fx:id="emailField" promptText="john@example.com"/>
+                        </VBox>
+                        
+                        <VBox spacing="8">
+                            <Label text="Area of Expertise *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <ComboBox fx:id="expertiseCombo" promptText="Select your expertise" prefWidth="500"/>
+                        </VBox>
+
+                         <VBox spacing="8">
+                            <Label text="Portfolio / GitHub URL" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <TextField fx:id="portfolioField" promptText="https://github.com/yourusername"/>
+                        </VBox>
+                        
+                        <VBox spacing="8">
+                            <Label text="Tell Us About Yourself *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <TextArea fx:id="aboutArea" promptText="Share your experience, skills, and what excites you about joining our team..." prefRowCount="4"/>
+                        </VBox>
+                        
+                        <Region prefHeight="10"/>
+                        <Button text="Submit Application" onAction="#onSubmitApplication" styleClass="button-primary" style="-fx-background-radius: 4; -fx-font-size: 16px;"/>
+                    </VBox>
+                    
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
