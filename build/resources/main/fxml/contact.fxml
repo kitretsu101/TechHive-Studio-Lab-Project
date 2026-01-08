@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.techhive.controller.ContactController"
+            fitToWidth="true"
+            styleClass="main-scroll-pane"
+            stylesheets="@../css/styles.css"
+            hbarPolicy="NEVER">
+
+    <VBox styleClass="main-container" spacing="0">
+        
+        <!-- Navbar -->
+        <HBox fx:id="navBar" styleClass="nav-bar" alignment="CENTER">
+            <padding><Insets top="15" right="50" bottom="15" left="50"/></padding>
+            <Label fx:id="logoLabel" text="TechHive Studio" styleClass="logo"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <HBox fx:id="navLinks" spacing="35" alignment="CENTER"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="startProjectBtn" text="Start a Project" styleClass="btn, btn-primary"/>
+        </HBox>
+
+        <!-- Header -->
+        <VBox styleClass="page-header" alignment="CENTER" spacing="15">
+            <padding><Insets top="60" right="50" bottom="40" left="50"/></padding>
+            <Label text="Get in Touch" styleClass="page-title"/>
+            <Label text="Have a project in mind? Let's talk about it." styleClass="page-subtitle" textAlignment="CENTER"/>
+        </VBox>
+
+        <!-- Contact Form Container -->
+        <VBox alignment="CENTER" spacing="30">
+            <padding><Insets bottom="80"/></padding>
+            
+            <VBox styleClass="contact-form-card" maxWidth="600" spacing="20">
+                <padding><Insets top="40" right="40" bottom="40" left="40"/></padding>
+                
+                <Label text="Send us a message" styleClass="section-title" style="-fx-font-size: 24px;"/>
+                
+                <VBox spacing="8">
+                    <Label text="Name *" styleClass="form-label"/>
+                    <TextField fx:id="nameField" styleClass="form-input" promptText="Your Name"/>
+                </VBox>
+                
+                <VBox spacing="8">
+                    <Label text="Email *" styleClass="form-label"/>
+                    <TextField fx:id="emailField" styleClass="form-input" promptText="john@example.com"/>
+                </VBox>
+                
+                <VBox spacing="8">
+                    <Label text="Subject" styleClass="form-label"/>
+                    <TextField fx:id="subjectField" styleClass="form-input" promptText="Project Inquiry"/>
+                </VBox>
+                
+                <VBox spacing="8">
+                    <Label text="Message" styleClass="form-label"/>
+                    <TextArea fx:id="messageArea" styleClass="form-input" promptText="Tell us about your project..." prefRowCount="5" wrapText="true"/>
+                </VBox>
+
+                <Button fx:id="submitBtn" text="Send Message" styleClass="btn, btn-primary" maxWidth="Infinity"/>
+                
+                <Label fx:id="statusLabel" styleClass="form-status-label"/>
+            </VBox>
+        </VBox>
+
+        <!-- Footer -->
+        <HBox styleClass="footer" alignment="CENTER">
+            <padding><Insets top="30" right="50" bottom="30" left="50"/></padding>
+            <Label text="© 2024 TechHive Studio. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+
+    </VBox>
+</ScrollPane>

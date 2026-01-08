@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.techhive.controller.PortfolioController"
+            fitToWidth="true"
+            styleClass="main-scroll-pane"
+            stylesheets="@../css/styles.css"
+            hbarPolicy="NEVER">
+    
+    <VBox styleClass="main-container" spacing="0">
+        
+        <!-- Navigation Bar -->
+        <HBox fx:id="navBar" styleClass="nav-bar" alignment="CENTER">
+            <padding><Insets top="15" right="50" bottom="15" left="50"/></padding>
+            
+            <Label fx:id="logoLabel" text="TechHive Studio" styleClass="logo"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <HBox fx:id="navLinks" spacing="35" alignment="CENTER">
+                <!-- Populated by controller -->
+            </HBox>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Button fx:id="startProjectBtn" text="Start a Project" styleClass="btn, btn-primary"/>
+        </HBox>
+        
+        <!-- Page Header -->
+        <VBox styleClass="page-header" alignment="CENTER" spacing="15">
+            <padding><Insets top="60" right="50" bottom="60" left="50"/></padding>
+            
+            <Label fx:id="pageTitle" text="Our Portfolio" styleClass="page-title"/>
+            <Label fx:id="pageSubtitle" 
+                   text="Explore our case studies and see how we've helped businesses transform digitally"
+                   styleClass="page-subtitle"
+                   textAlignment="CENTER"
+                   maxWidth="700"/>
+        </VBox>
+        
+        <!-- Projects Container -->
+        <VBox fx:id="projectsContainer" styleClass="projects-container" spacing="40">
+            <padding><Insets top="20" right="80" bottom="80" left="80"/></padding>
+            <!-- Populated by controller -->
+        </VBox>
+        
+        <!-- Footer -->
+        <HBox styleClass="footer" alignment="CENTER">
+            <padding><Insets top="30" right="50" bottom="30" left="50"/></padding>
+            <Label text="© 2024 TechHive Studio. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+        
+    </VBox>
+</ScrollPane>

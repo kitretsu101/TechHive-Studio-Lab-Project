@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.techhive.controller.EngineerProfileController"
+            fitToWidth="true"
+            styleClass="main-scroll-pane"
+            stylesheets="@../css/styles.css"
+            hbarPolicy="NEVER">
+    
+    <VBox styleClass="main-container" spacing="0">
+        
+        <!-- Navigation Bar -->
+        <HBox fx:id="navBar" styleClass="nav-bar" alignment="CENTER">
+            <padding><Insets top="15" right="50" bottom="15" left="50"/></padding>
+            
+            <Label fx:id="logoLabel" text="TechHive Studio" styleClass="logo"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <HBox fx:id="navLinks" spacing="35" alignment="CENTER">
+                <!-- Populated by controller -->
+            </HBox>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Button fx:id="startProjectBtn" text="Start a Project" styleClass="btn, btn-primary"/>
+        </HBox>
+        
+        <!-- Back Button -->
+        <HBox styleClass="back-section" alignment="CENTER_LEFT">
+            <padding><Insets top="30" right="50" bottom="20" left="50"/></padding>
+            <Button fx:id="backButton" text="← Back to Engineers" styleClass="btn-back"/>
+        </HBox>
+        
+        <!-- Profile Content -->
+        <HBox styleClass="profile-content" alignment="TOP_CENTER" spacing="60">
+            <padding><Insets top="20" right="80" bottom="60" left="80"/></padding>
+            
+            <!-- Left Side - Profile Image and Basic Info -->
+            <VBox styleClass="profile-left" alignment="CENTER" spacing="20" minWidth="300">
+                <StackPane fx:id="profileImageContainer" styleClass="profile-image-wrapper">
+                    <!-- Populated by controller -->
+                </StackPane>
+                
+                <Label fx:id="engineerName" styleClass="profile-name" text="Engineer Name"/>
+                <Label fx:id="engineerRole" styleClass="profile-role" text="Role"/>
+            </VBox>
+            
+            <!-- Right Side - Details -->
+            <VBox styleClass="profile-right" spacing="30" HBox.hgrow="ALWAYS" maxWidth="700">
+                
+                <!-- About Section -->
+                <VBox styleClass="profile-section" spacing="15">
+                    <Label text="About" styleClass="profile-section-title"/>
+                    <Label fx:id="engineerBio" styleClass="profile-bio" wrapText="true"/>
+                </VBox>
+                
+                <!-- Skills Section -->
+                <VBox styleClass="profile-section" spacing="15">
+                    <Label text="Skills &amp; Technologies" styleClass="profile-section-title"/>
+                    <FlowPane fx:id="skillsPane" hgap="12" vgap="12">
+                        <!-- Populated by controller -->
+                    </FlowPane>
+                </VBox>
+                
+                <!-- Projects Section -->
+                <VBox fx:id="projectsSection" styleClass="profile-section" spacing="15">
+                    <!-- Populated by controller -->
+                </VBox>
+                
+            </VBox>
+        </HBox>
+        
+        <!-- Footer -->
+        <HBox styleClass="footer" alignment="CENTER">
+            <padding><Insets top="30" right="50" bottom="30" left="50"/></padding>
+            <Label text="© 2024 TechHive Studio. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+        
+    </VBox>
+</ScrollPane>

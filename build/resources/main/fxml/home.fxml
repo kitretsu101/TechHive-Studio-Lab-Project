@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<ScrollPane xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.techhive.controller.HomeController"
+            fitToWidth="true"
+            styleClass="main-scroll-pane"
+            stylesheets="@../css/styles.css"
+            hbarPolicy="NEVER">
+    
+    <VBox styleClass="main-container" spacing="0">
+        
+        <!-- Navigation Bar -->
+        <HBox fx:id="navBar" styleClass="nav-bar" alignment="CENTER">
+            <padding><Insets top="15" right="50" bottom="15" left="50"/></padding>
+            
+            <Label fx:id="logoLabel" text="TechHive Studio" styleClass="logo"/>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <HBox fx:id="navLinks" spacing="35" alignment="CENTER">
+                <!-- Populated by controller -->
+            </HBox>
+            
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <Button fx:id="startProjectBtn" text="Start a Project" styleClass="btn, btn-primary"/>
+        </HBox>
+        
+        <!-- Hero Section -->
+        <VBox fx:id="heroSection" styleClass="hero-section" alignment="CENTER" spacing="25">
+            <padding><Insets top="100" right="50" bottom="100" left="50"/></padding>
+            
+            <Label fx:id="heroTitle" 
+                   text="Building Scalable Software.&#10;Designing Digital Excellence."
+                   styleClass="hero-title"
+                   textAlignment="CENTER"
+                   wrapText="true"/>
+            
+            <Label fx:id="heroSubtitle"
+                   text="We craft innovative digital solutions that transform businesses. From concept to deployment, we're your trusted technology partner."
+                   styleClass="hero-subtitle"
+                   textAlignment="CENTER"
+                   wrapText="true"
+                   maxWidth="700"/>
+            
+            <HBox fx:id="heroButtons" spacing="20" alignment="CENTER">
+                <padding><Insets top="20"/></padding>
+                <!-- Populated by controller -->
+            </HBox>
+        </VBox>
+        
+        <!-- Services Section -->
+        <VBox styleClass="section" alignment="CENTER" spacing="40">
+            <padding><Insets top="80" right="50" bottom="80" left="50"/></padding>
+            
+            <Label text="Our Services" styleClass="section-title"/>
+            <Label text="Comprehensive solutions for your digital needs" styleClass="section-subtitle"/>
+            
+            <FlowPane fx:id="servicesGrid" 
+                      hgap="30" vgap="30" 
+                      alignment="CENTER"
+                      prefWrapLength="1100">
+                <!-- Populated by controller -->
+            </FlowPane>
+        </VBox>
+        
+        <!-- Statistics Section -->
+        <HBox fx:id="statsSection" styleClass="stats-section" alignment="CENTER" spacing="80">
+            <padding><Insets top="60" right="50" bottom="60" left="50"/></padding>
+            <!-- Populated by controller -->
+        </HBox>
+        
+        <!-- CTA Section -->
+        <VBox fx:id="ctaSection" styleClass="cta-section" alignment="CENTER" spacing="20">
+            <padding><Insets top="80" right="50" bottom="80" left="50"/></padding>
+            <!-- Populated by controller -->
+        </VBox>
+        
+        <!-- Footer -->
+        <HBox styleClass="footer" alignment="CENTER">
+            <padding><Insets top="30" right="50" bottom="30" left="50"/></padding>
+            <Label text="© 2024 TechHive Studio. All rights reserved." styleClass="footer-text"/>
+        </HBox>
+        
+    </VBox>
+</ScrollPane>
