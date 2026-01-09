@@ -72,11 +72,37 @@ public class EngineersController {
         card.setPrefHeight(280);
         card.setAlignment(javafx.geometry.Pos.CENTER);
 
-        // Image Placeholder
-        VBox imagePlaceholder = new VBox();
-        imagePlaceholder.setStyle(
-                "-fx-background-color: #333; -fx-pref-width: 100; -fx-pref-height: 100; -fx-background-radius: 50;");
-        imagePlaceholder.setMaxSize(100, 100);
+        // Image
+        javafx.scene.image.ImageView imageView = new javafx.scene.image.ImageView();
+        imageView.setFitWidth(100);
+        imageView.setFitHeight(100);
+        imageView.setPreserveRatio(false); // Fill the circle
+
+        // Circle clip
+        javafx.scene.shape.Circle clip = new javafx.scene.shape.Circle(50, 50, 50);
+        imageView.setClip(clip);
+
+        String imageUrl = engineer.getImageUrl();
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            try {
+                javafx.scene.image.Image image = null;
+                if (imageUrl.startsWith("http")) {
+                    image = new javafx.scene.image.Image(imageUrl, true);
+                } else {
+                    String path = "/org/example/techhive_studio_website_project_final/images/engineers/" + imageUrl;
+                    java.net.URL resource = getClass().getResource(path);
+                    if (resource != null) {
+                        image = new javafx.scene.image.Image(resource.toExternalForm());
+                    }
+                }
+
+                if (image != null) {
+                    imageView.setImage(image);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
         Label name = new Label(engineer.getName());
         name.setStyle("-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: -color-text-primary;");
@@ -93,7 +119,7 @@ public class EngineersController {
                 String.join(" • ", engineer.getSkills().subList(0, Math.min(engineer.getSkills().size(), 2))));
         skills.setStyle("-fx-text-fill: -color-text-muted; -fx-font-size: 10px;");
 
-        card.getChildren().addAll(imagePlaceholder, name, role, bio, skills);
+        card.getChildren().addAll(imageView, name, role, bio, skills);
 
         card.setOnMouseClicked(e -> {
             org.example.techhive_studio_website_project_final.core.SceneManager.getInstance()

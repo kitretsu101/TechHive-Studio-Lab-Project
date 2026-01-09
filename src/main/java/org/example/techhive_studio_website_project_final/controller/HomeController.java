@@ -12,8 +12,15 @@ public class HomeController {
     @FXML
     public void initialize() {
         // Load a placeholder image for the dashboard preview
+        // Load the hero dashboard image
         try {
-            heroImage.setImage(new Image("https://via.placeholder.com/800x400"));
+            java.net.URL imageUrl = getClass()
+                    .getResource("/org/example/techhive_studio_website_project_final/images/hero_dashboard.jpg");
+            if (imageUrl != null) {
+                heroImage.setImage(new Image(imageUrl.toExternalForm()));
+            } else {
+                System.out.println("Hero image resource not found.");
+            }
         } catch (Exception e) {
             System.out.println("Could not load hero image: " + e.getMessage());
         }

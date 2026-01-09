@@ -26,18 +26,18 @@ public class DataStore {
 
     private void loadDummyData() {
         // Engineers
-        engineers.add(new Engineer("1", "Alex Chen", "Fullstack Engineer", "Expert in Java and React.",
-                "https://via.placeholder.com/150", Arrays.asList("Java", "React", "AWS")));
-        engineers.add(new Engineer("2", "Sarah Jones", "UI/UX Designer", "Passionate about user-centric design.",
-                "https://via.placeholder.com/150", Arrays.asList("Figma", "CSS", "Prototyping")));
-        engineers.add(new Engineer("3", "Mike Ross", "Backend Engineer", "Scalable systems architect.",
-                "https://via.placeholder.com/150", Arrays.asList("Spring Boot", "Kafka", "Docker")));
-        engineers.add(new Engineer("4", "Emily Blunt", "DevOps Engineer", "Automating everything.",
-                "https://via.placeholder.com/150", Arrays.asList("Kubernetes", "CI/CD", "Terraform")));
-        engineers.add(new Engineer("5", "David Kim", "Frontend Engineer", "Pixel perfectionist.",
+        engineers.add(new Engineer("1", "Plabon Barua", "Fullstack Engineer", "Expert in Java and React.",
+                "Plabon.jpg", Arrays.asList("Java", "React", "AWS")));
+        engineers.add(new Engineer("2", "Hirobi Chakma", "UI/UX Designer", "Passionate about user-centric design.",
+                "Hirobi.jpeg", Arrays.asList("Figma", "CSS", "Prototyping")));
+        engineers.add(new Engineer("3", "Utsa Roy", "Backend Engineer", "Scalable systems architect.",
+                "utsa.jpeg", Arrays.asList("Spring Boot", "Kafka", "Docker")));
+        engineers.add(new Engineer("4", "Tahmid Khan Mahin", "DevOps Engineer", "Automating everything.",
+                "tahmid.jpeg", Arrays.asList("Kubernetes", "CI/CD", "Terraform")));
+        engineers.add(new Engineer("5", "Sabbir Rahman", "Frontend Engineer", "Pixel perfectionist.",
                 "https://via.placeholder.com/150", Arrays.asList("React", "TypeScript", "Tailwind")));
-        engineers.add(new Engineer("6", "Jessica Pearson", "Product Manager", "Leading the vision.",
-                "https://via.placeholder.com/150", Arrays.asList("Agile", "Scrum", "Roadmap")));
+        engineers.add(new Engineer("6", "Fatiha Nazat", "Product Manager", "Leading the vision.",
+                "nazat.jpeg", Arrays.asList("Agile", "Scrum", "Roadmap")));
 
         // Projects
         projects.add(new Project("1", "Nova eCommerce Platform", "A high-performance eCommerce solution.",

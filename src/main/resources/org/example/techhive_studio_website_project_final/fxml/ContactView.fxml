@@ -39,7 +39,7 @@
                             <Label text="✉" style="-fx-font-size: 24px; -fx-text-fill: -color-secondary;"/>
                         </VBox>
                         <Label text="Email Us" styleClass="h3" style="-fx-font-size: 18px;"/>
-                        <Label text="hello@techhivestudio.com" styleClass="body-text"/>
+                        <Label text="dhruboplabon987@gmail.com" styleClass="body-text"/>
                      </VBox>
                      
                      <VBox styleClass="card" alignment="CENTER" spacing="15" prefWidth="300" prefHeight="180" style="-fx-background-color: rgba(255,255,255,0.03);">
@@ -47,7 +47,7 @@
                             <Label text="📞" style="-fx-font-size: 24px; -fx-text-fill: -color-secondary;"/>
                         </VBox>
                         <Label text="Call Us" styleClass="h3" style="-fx-font-size: 18px;"/>
-                        <Label text="+1 (555) 123-4567" styleClass="body-text"/>
+                        <Label text="+8801871541511" styleClass="body-text"/>
                      </VBox>
                      
                      <VBox styleClass="card" alignment="CENTER" spacing="15" prefWidth="300" prefHeight="180" style="-fx-background-color: rgba(255,255,255,0.03);">

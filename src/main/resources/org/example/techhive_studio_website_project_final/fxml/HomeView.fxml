@@ -45,7 +45,7 @@
                     
                     <!-- Hero Image Placeholder / Dashboard Preview -->
                     <VBox styleClass="card" style="-fx-padding: 10; -fx-background-color: rgba(255,255,255,0.05); -fx-effect: dropshadow(three-pass-box, rgba(0, 240, 255, 0.2), 50, 0, 0, 0); -fx-max-width: 900; -fx-min-height: 400; -fx-alignment: center;">
-                        <Label text="[Hero Dashboard Image]" style="-fx-text-fill: -color-text-muted;"/>
+
                          <ImageView fx:id="heroImage" fitWidth="800" fitHeight="400" preserveRatio="true"/>
                     </VBox>
                 </VBox>

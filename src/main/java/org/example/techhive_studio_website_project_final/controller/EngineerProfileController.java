@@ -36,8 +36,32 @@ public class EngineerProfileController {
         roleLabel.setText(engineer.getRole());
         bioLabel.setText(engineer.getBio());
 
-        // Setup image (using placeholder logic for now since URL is dummy)
-        // profileImage.setImage(new Image(engineer.getImageUrl()));
+        // Setup image
+        String imageUrl = engineer.getImageUrl();
+        if (imageUrl != null && !imageUrl.isEmpty()) {
+            try {
+                javafx.scene.image.Image image;
+                if (imageUrl.startsWith("http")) {
+                    image = new javafx.scene.image.Image(imageUrl, true);
+                } else {
+                    String path = "/org/example/techhive_studio_website_project_final/images/engineers/" + imageUrl;
+                    java.net.URL resource = getClass().getResource(path);
+                    if (resource != null) {
+                        image = new javafx.scene.image.Image(resource.toExternalForm());
+                    } else {
+                        // Fallback if resource not found
+                        image = null;
+                        System.out.println("Resource not found: " + path);
+                    }
+                }
+
+                if (image != null) {
+                    profileImage.setImage(image);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
         skillsContainer.getChildren().clear();
         for (String skill : engineer.getSkills()) {
