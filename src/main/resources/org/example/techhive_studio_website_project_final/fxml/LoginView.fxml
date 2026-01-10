@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.techhive_studio_website_project_final.controller.LoginController"
+      styleClass="auth-container"
+      prefWidth="1200" prefHeight="800">
+
+    <!-- Left Panel - Branding & Illustration -->
+    <VBox styleClass="auth-left-panel" spacing="30" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" minWidth="500">
+        <padding>
+            <Insets top="60" right="60" bottom="60" left="60"/>
+        </padding>
+        
+        <!-- Brand -->
+        <Label text="TechHive Studio" styleClass="auth-brand"/>
+        
+        <Region prefHeight="40"/>
+        
+        <!-- Tagline -->
+        <VBox spacing="5">
+            <Label text="Welcome Back!" styleClass="auth-tagline"/>
+            <Label text="Build Something Amazing." styleClass="auth-tagline-gradient"/>
+        </VBox>
+        
+        <Label text="Access your projects, collaborate with your team, and continue building exceptional software solutions." 
+               styleClass="auth-description" wrapText="true" maxWidth="400"/>
+        
+        <Region VBox.vgrow="ALWAYS"/>
+        
+        <!-- Feature highlights -->
+        <VBox spacing="20">
+            <HBox spacing="15" styleClass="feature-box" alignment="CENTER_LEFT">
+                <Label text="🚀" styleClass="feature-icon"/>
+                <VBox spacing="3">
+                    <Label text="Fast Development" styleClass="feature-title"/>
+                    <Label text="Ship products 10x faster" styleClass="feature-desc"/>
+                </VBox>
+            </HBox>
+            
+            <HBox spacing="15" styleClass="feature-box" alignment="CENTER_LEFT">
+                <Label text="🔒" styleClass="feature-icon"/>
+                <VBox spacing="3">
+                    <Label text="Enterprise Security" styleClass="feature-title"/>
+                    <Label text="Your data is always protected" styleClass="feature-desc"/>
+                </VBox>
+            </HBox>
+            
+            <HBox spacing="15" styleClass="feature-box" alignment="CENTER_LEFT">
+                <Label text="💡" styleClass="feature-icon"/>
+                <VBox spacing="3">
+                    <Label text="Expert Support" styleClass="feature-title"/>
+                    <Label text="24/7 technical assistance" styleClass="feature-desc"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </VBox>
+
+    <!-- Right Panel - Login Form -->
+    <VBox styleClass="auth-right-panel" alignment="CENTER" HBox.hgrow="ALWAYS" minWidth="500">
+        <padding>
+            <Insets top="60" right="80" bottom="60" left="80"/>
+        </padding>
+        
+        <!-- Auth Card -->
+        <VBox styleClass="auth-card" spacing="25" maxWidth="420">
+            
+            <!-- Header -->
+            <VBox spacing="8">
+                <Label text="Sign In" styleClass="auth-card-title"/>
+                <Label text="Enter your credentials to access your account" styleClass="auth-card-subtitle"/>
+            </VBox>
+            
+            <!-- Email Field -->
+            <VBox spacing="8">
+                <Label text="Email Address" styleClass="form-label"/>
+                <TextField fx:id="emailField" promptText="you@example.com" styleClass="auth-text-field"/>
+            </VBox>
+            
+            <!-- Password Field -->
+            <VBox spacing="8">
+                <Label text="Password" styleClass="form-label"/>
+                <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="auth-text-field"/>
+            </VBox>
+            
+            <!-- Options Row -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <CheckBox fx:id="rememberMeCheckbox" text="Remember me" styleClass="auth-checkbox"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label text="Forgot Password?" styleClass="link-text" onMouseClicked="#onForgotPasswordClick"/>
+            </HBox>
+            
+            <!-- Error Message -->
+            <Label fx:id="errorLabel" styleClass="error-text" visible="false" managed="false"/>
+            
+            <!-- Login Button -->
+            <Button fx:id="loginButton" text="Sign In →" onAction="#onLoginClick" styleClass="button-gradient" maxWidth="Infinity"/>
+            
+            <!-- Divider -->
+            <HBox alignment="CENTER" spacing="15">
+                <Separator HBox.hgrow="ALWAYS" styleClass="divider-line"/>
+                <Label text="Or continue with" styleClass="divider-text"/>
+                <Separator HBox.hgrow="ALWAYS" styleClass="divider-line"/>
+            </HBox>
+            
+            <!-- Social Login -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button fx:id="googleButton" text="🔷 Google" onAction="#onGoogleSignInClick" styleClass="button-social" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Button fx:id="linkedInButton" text="💼 LinkedIn" onAction="#onLinkedInSignInClick" styleClass="button-social" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            </HBox>
+            
+            <!-- Sign Up Link -->
+            <HBox alignment="CENTER" spacing="5">
+                <Label text="New to TechHive?" styleClass="auth-card-subtitle"/>
+                <Label text="Create an account" styleClass="link-text" onMouseClicked="#onSignupClick"/>
+            </HBox>
+            
+            <!-- Back to Home -->
+            <HBox alignment="CENTER">
+                <Label text="← Back to Home" styleClass="link-text" onMouseClicked="#onBackToHomeClick"/>
+            </HBox>
+            
+        </VBox>
+    </VBox>
+</HBox>

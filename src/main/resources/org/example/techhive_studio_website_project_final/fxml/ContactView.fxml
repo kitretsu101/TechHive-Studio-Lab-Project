@@ -92,7 +92,10 @@
                         <TextArea fx:id="projectDetailsArea" promptText="Tell us about your project, your goals, timeline..." prefRowCount="5"/>
                     </VBox>
                     
-                    <Button text="Send Inquiry" onAction="#onSubmit" styleClass="button-primary" style="-fx-background-radius: 4; -fx-font-size: 16px; -fx-pref-width: Infinity;"/>
+                    <!-- Message Label for feedback -->
+                    <Label fx:id="messageLabel" wrapText="true" visible="false" managed="false" style="-fx-font-size: 14px;"/>
+                    
+                    <Button fx:id="submitButton" text="Send Inquiry" onAction="#onSubmit" styleClass="button-primary" style="-fx-background-radius: 4; -fx-font-size: 16px; -fx-pref-width: Infinity;"/>
 
                 </VBox>
                 

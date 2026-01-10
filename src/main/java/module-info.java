@@ -11,8 +11,20 @@ module org.example.techhive_studio_website_project_final {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens org.example.techhive_studio_website_project_final to javafx.fxml;
+    // New dependencies for Firebase and SQLite
+    requires com.google.gson;
+    requires java.sql;
+    requires java.desktop;
+    requires firebase.admin;
+
+    opens org.example.techhive_studio_website_project_final to javafx.fxml, com.google.gson;
     opens org.example.techhive_studio_website_project_final.controller to javafx.fxml;
+    opens org.example.techhive_studio_website_project_final.model to com.google.gson;
+    opens org.example.techhive_studio_website_project_final.data to javafx.fxml;
+    opens org.example.techhive_studio_website_project_final.service to javafx.fxml;
 
     exports org.example.techhive_studio_website_project_final;
+    exports org.example.techhive_studio_website_project_final.model;
+    exports org.example.techhive_studio_website_project_final.data;
+    exports org.example.techhive_studio_website_project_final.service;
 }

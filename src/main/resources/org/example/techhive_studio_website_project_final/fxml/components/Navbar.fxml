@@ -28,12 +28,18 @@
     <Button text="Services" onAction="#onServicesClick" styleClass="nav-button"/>
     <Button text="Portfolio" onAction="#onPortfolioClick" styleClass="nav-button"/>
     <Button text="Our Engineers" onAction="#onEngineersClick" styleClass="nav-button"/>
-    <Button text="Contribute" onAction="#onContributeClick" styleClass="nav-button"/>
-    <Button text="Contact" onAction="#onContactClick" styleClass="nav-button"/>
+    
+    <!-- Regular user only -->
+    <Button fx:id="contributeButton" text="Contribute" onAction="#onContributeClick" styleClass="nav-button"/>
+    <Button fx:id="contactButton" text="Contact" onAction="#onContactClick" styleClass="nav-button"/>
+    
+    <!-- Admin only -->
+    <Button fx:id="databaseButton" text="Database" onAction="#onDatabaseClick" styleClass="nav-button, admin-nav-button" visible="false" managed="false"/>
 
     <Region prefWidth="20"/>
 
-    <!-- CTA -->
+    <!-- Login & CTA -->
+    <Button fx:id="loginButton" text="Login" onAction="#onLoginClick" styleClass="button-login"/>
     <Button text="Start a Project" onAction="#onStartProjectClick" styleClass="button-primary"/>
 
 </HBox>

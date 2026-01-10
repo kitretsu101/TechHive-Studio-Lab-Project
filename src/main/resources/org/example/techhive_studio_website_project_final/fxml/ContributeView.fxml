@@ -112,7 +112,9 @@
                         </VBox>
                         
                         <Region prefHeight="10"/>
-                        <Button text="Submit Application" onAction="#onSubmitApplication" styleClass="button-primary" style="-fx-background-radius: 4; -fx-font-size: 16px;"/>
+                        <!-- Message Label for feedback -->
+                        <Label fx:id="messageLabel" wrapText="true" visible="false" managed="false" style="-fx-font-size: 14px;"/>
+                        <Button fx:id="submitButton" text="Submit Application" onAction="#onSubmitApplication" styleClass="button-primary" style="-fx-background-radius: 4; -fx-font-size: 16px;"/>
                     </VBox>
                     
                 </HBox>

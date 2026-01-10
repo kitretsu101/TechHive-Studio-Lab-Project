@@ -3,6 +3,7 @@ package org.example.techhive_studio_website_project_final.controller;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import org.example.techhive_studio_website_project_final.core.SceneManager;
 
 public class HomeController {
 
@@ -24,5 +25,20 @@ public class HomeController {
         } catch (Exception e) {
             System.out.println("Could not load hero image: " + e.getMessage());
         }
+    }
+
+    @FXML
+    private void onStartProjectClick() {
+        SceneManager.getInstance().switchViewWithFade("fxml/ContactView.fxml");
+    }
+
+    @FXML
+    private void onViewPortfolioClick() {
+        SceneManager.getInstance().switchViewWithFade("fxml/PortfolioView.fxml");
+    }
+
+    @FXML
+    private void onGetStartedClick() {
+        SceneManager.getInstance().switchViewWithFade("fxml/ContactView.fxml");
     }
 }

@@ -39,8 +39,8 @@
                            styleClass="body-text" style="-fx-font-size: 20px; -fx-max-width: 700; -fx-text-alignment: center;" wrapText="true"/>
                     
                     <HBox alignment="CENTER" spacing="20">
-                        <Button text="Start a Project →" styleClass="button-primary" style="-fx-font-size: 16px; -fx-padding: 12 30; -fx-background-radius: 30;"/>
-                        <Button text="View Portfolio" styleClass="button-outline" style="-fx-font-size: 16px; -fx-padding: 12 30; -fx-background-radius: 30;"/>
+                        <Button text="Start a Project →" onAction="#onStartProjectClick" styleClass="button-primary" style="-fx-font-size: 16px; -fx-padding: 12 30; -fx-background-radius: 30;"/>
+                        <Button text="View Portfolio" onAction="#onViewPortfolioClick" styleClass="button-outline" style="-fx-font-size: 16px; -fx-padding: 12 30; -fx-background-radius: 30;"/>
                     </HBox>
                     
                     <!-- Hero Image Placeholder / Dashboard Preview -->
@@ -138,7 +138,7 @@
                 <VBox alignment="CENTER" spacing="30" style="-fx-padding: 100 20; -fx-background-color: linear-gradient(to top, #0B0F19, #111625);">
                     <Label text="Ready to Build Something Amazing?" styleClass="h2" style="-fx-font-size: 36px;"/>
                     <Label text="Let's discuss your project and create a solution that exceeds expectations." styleClass="body-text"/>
-                    <Button text="Get Started Today →" styleClass="button-primary" style="-fx-font-size: 18px; -fx-padding: 15 40; -fx-background-radius: 30;"/>
+                    <Button text="Get Started Today →" onAction="#onGetStartedClick" styleClass="button-primary" style="-fx-font-size: 18px; -fx-padding: 15 40; -fx-background-radius: 30;"/>
                     <Label text="© 2026 TechHive Studio. All rights reserved." styleClass="body-text" style="-fx-font-size: 12px; -fx-padding: 40 0 0 0;"/>
                 </VBox>
 
