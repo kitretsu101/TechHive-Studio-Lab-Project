@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.techhive_studio_website_project_final.controller.PortfolioController"
+            prefWidth="1200" prefHeight="800">
+
+    <top>
+        <fx:include source="components/Navbar.fxml"/>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: -fx-base;">
+            <VBox spacing="40" alignment="TOP_CENTER" style="-fx-padding: 50 20; -fx-background-color: -fx-base;">
+                
+                <!-- Header -->
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="Our Work" styleClass="h1"/>
+                    <Label text="Case studies and success stories." styleClass="body-text" style="-fx-font-size: 18px;"/>
+                </VBox>
+
+                <!-- Grid -->
+                <FlowPane fx:id="projectsGrid" hgap="40" vgap="40" alignment="TOP_CENTER" 
+                          style="-fx-padding: 20;" prefWrapLength="1100">
+                    <!-- Cards injection -->
+                </FlowPane>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

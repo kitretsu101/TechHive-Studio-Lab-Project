@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.techhive_studio_website_project_final.controller.EngineersController"
+            prefWidth="1200" prefHeight="800">
+
+    <top>
+        <fx:include source="components/Navbar.fxml"/>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: -fx-base;">
+            <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 60 40; -fx-background-color: -fx-base;">
+                
+                <!-- Page Header -->
+                <VBox alignment="CENTER" spacing="15" styleClass="engineers-header">
+                    <Label text="Our Expert Engineers" styleClass="engineers-title"/>
+                    <Label text="Meet the talented team behind TechHive Studio's success" styleClass="engineers-subtitle"/>
+                </VBox>
+
+                <!-- Filter Buttons -->
+                <HBox fx:id="filterButtonsBox" alignment="CENTER" spacing="12">
+                    <Button fx:id="filterAll" text="All" onAction="#onFilterAll" styleClass="filter-button"/>
+                    <Button fx:id="filterFrontend" text="Frontend Engineer" onAction="#onFilterFrontend" styleClass="filter-button"/>
+                    <Button fx:id="filterBackend" text="Backend Engineer" onAction="#onFilterBackend" styleClass="filter-button"/>
+                    <Button fx:id="filterFullstack" text="Fullstack Engineer" onAction="#onFilterFullstack" styleClass="filter-button"/>
+                    <Button fx:id="filterDevOps" text="DevOps Engineer" onAction="#onFilterDevOps" styleClass="filter-button"/>
+                    <Button fx:id="filterDesigner" text="Product Designer" onAction="#onFilterDesigner" styleClass="filter-button"/>
+                </HBox>
+
+                <!-- CEO & Founder Section -->
+                <VBox fx:id="ceoSection" alignment="CENTER" spacing="30">
+                    <VBox alignment="CENTER" spacing="10">
+                        <Region styleClass="section-divider" prefWidth="200"/>
+                        <Label text="CEO &amp; Founder" styleClass="section-title"/>
+                        <Region styleClass="section-divider" prefWidth="200"/>
+                    </VBox>
+                    
+                    <!-- CEO Card will be injected by Controller -->
+                    <HBox fx:id="ceoCardContainer" alignment="CENTER"/>
+                </VBox>
+
+                <!-- Founding Members Section -->
+                <VBox fx:id="foundersSection" alignment="CENTER" spacing="30">
+                    <VBox alignment="CENTER" spacing="10">
+                        <Region styleClass="section-divider" prefWidth="200"/>
+                        <Label text="Founding Members" styleClass="section-title"/>
+                        <Region styleClass="section-divider" prefWidth="200"/>
+                    </VBox>
+                    
+                    <!-- Founders Grid -->
+                    <FlowPane fx:id="foundersGrid" hgap="25" vgap="25" alignment="CENTER" 
+                              style="-fx-padding: 20;" prefWrapLength="1100"/>
+                </VBox>
+
+                <!-- Team Members Section -->
+                <VBox fx:id="teamSection" alignment="CENTER" spacing="30">
+                    <VBox alignment="CENTER" spacing="10">
+                        <Region styleClass="section-divider" prefWidth="200"/>
+                        <Label text="Team Members" styleClass="section-title"/>
+                        <Region styleClass="section-divider" prefWidth="200"/>
+                    </VBox>
+                    
+                    <!-- Team Grid -->
+                    <FlowPane fx:id="teamGrid" hgap="25" vgap="25" alignment="CENTER" 
+                              style="-fx-padding: 20;" prefWrapLength="1100"/>
+                </VBox>
+
+                <!-- Footer Spacer -->
+                <Region prefHeight="40"/>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>

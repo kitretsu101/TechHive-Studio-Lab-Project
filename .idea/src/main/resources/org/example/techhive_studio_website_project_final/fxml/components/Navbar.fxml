@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.geometry.Insets?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.techhive_studio_website_project_final.controller.NavbarController"
+      styleClass="navbar"
+      alignment="CENTER_LEFT"
+      spacing="20"
+      prefHeight="70.0">
+
+    <padding>
+        <Insets top="10" right="40" bottom="10" left="40"/>
+    </padding>
+
+    <!-- Logo -->
+    <Label text="TechHive Studio" style="-fx-text-fill: -color-primary; -fx-font-weight: bold; -fx-font-size: 20px;"/>
+
+    <Region HBox.hgrow="ALWAYS"/>
+
+    <!-- Navigation Links -->
+    <Button text="Home" onAction="#onHomeClick" styleClass="nav-button"/>
+    <Button text="Services" onAction="#onServicesClick" styleClass="nav-button"/>
+    <Button text="Portfolio" onAction="#onPortfolioClick" styleClass="nav-button"/>
+    <Button text="Our Engineers" onAction="#onEngineersClick" styleClass="nav-button"/>
+    <Button text="Contribute" onAction="#onContributeClick" styleClass="nav-button"/>
+    <Button text="Contact" onAction="#onContactClick" styleClass="nav-button"/>
+
+    <Region prefWidth="20"/>
+
+    <!-- Login & CTA -->
+    <Button text="Login" onAction="#onLoginClick" styleClass="button-login"/>
+    <Button text="Start a Project" onAction="#onStartProjectClick" styleClass="button-primary"/>
+
+</HBox>

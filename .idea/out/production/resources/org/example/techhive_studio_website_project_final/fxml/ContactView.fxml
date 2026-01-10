@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.techhive_studio_website_project_final.controller.ContactController"
+            prefWidth="1200" prefHeight="800">
+
+    <top>
+        <fx:include source="components/Navbar.fxml"/>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: -fx-base;">
+            <VBox spacing="60" alignment="TOP_CENTER" style="-fx-padding: 80 40; -fx-background-color: -fx-base;">
+                
+                <!-- Header -->
+                <VBox alignment="CENTER" spacing="15">
+                    <Button text="Get In Touch" styleClass="button-outline" style="-fx-padding: 5 15; -fx-font-size: 12px;"/>
+                    <Label text="Let's Build Something Great" styleClass="h1"/>
+                    <Label text="Tell us about your project and we'll get back to you within 24 hours." 
+                           styleClass="body-text" style="-fx-font-size: 18px; -fx-text-fill: -color-text-secondary;"/>
+                </VBox>
+                
+                <!-- Contact Cards -->
+                <HBox alignment="CENTER" spacing="30">
+                     <VBox styleClass="card" alignment="CENTER" spacing="15" prefWidth="300" prefHeight="180" style="-fx-background-color: rgba(255,255,255,0.03);">
+                        <VBox styleClass="icon-box" style="-fx-background-color: rgba(112, 0, 255, 0.1); -fx-background-radius: 50;">
+                            <Label text="✉" style="-fx-font-size: 24px; -fx-text-fill: -color-secondary;"/>
+                        </VBox>
+                        <Label text="Email Us" styleClass="h3" style="-fx-font-size: 18px;"/>
+                        <Label text="hello@techhivestudio.com" styleClass="body-text"/>
+                     </VBox>
+                     
+                     <VBox styleClass="card" alignment="CENTER" spacing="15" prefWidth="300" prefHeight="180" style="-fx-background-color: rgba(255,255,255,0.03);">
+                        <VBox styleClass="icon-box" style="-fx-background-color: rgba(112, 0, 255, 0.1); -fx-background-radius: 50;">
+                            <Label text="📞" style="-fx-font-size: 24px; -fx-text-fill: -color-secondary;"/>
+                        </VBox>
+                        <Label text="Call Us" styleClass="h3" style="-fx-font-size: 18px;"/>
+                        <Label text="+1 (555) 123-4567" styleClass="body-text"/>
+                     </VBox>
+                     
+                     <VBox styleClass="card" alignment="CENTER" spacing="15" prefWidth="300" prefHeight="180" style="-fx-background-color: rgba(255,255,255,0.03);">
+                        <VBox styleClass="icon-box" style="-fx-background-color: rgba(112, 0, 255, 0.1); -fx-background-radius: 50;">
+                             <Label text="📍" style="-fx-font-size: 24px; -fx-text-fill: -color-secondary;"/>
+                        </VBox>
+                        <Label text="Visit Us" styleClass="h3" style="-fx-font-size: 18px;"/>
+                        <Label text="Remote &amp; Global" styleClass="body-text"/>
+                     </VBox>
+                </HBox>
+
+                <!-- Project Form -->
+                <VBox spacing="30" maxWidth="800" styleClass="card" style="-fx-padding: 60; -fx-border-color: rgba(255,255,255,0.05);">
+                    <VBox alignment="CENTER">
+                        <Label text="Start Your Project" styleClass="h2"/>
+                    </VBox>
+                    
+                    <HBox spacing="30">
+                         <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Your Name *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <TextField fx:id="nameField" promptText="John Doe"/>
+                        </VBox>
+                         <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Email Address *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <TextField fx:id="emailField" promptText="john@example.com"/>
+                        </VBox>
+                    </HBox>
+                    
+                     <HBox spacing="30">
+                         <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Project Type *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <ComboBox fx:id="projectTypeCombo" promptText="Select a service" maxWidth="Infinity"/>
+                        </VBox>
+                         <VBox spacing="8" HBox.hgrow="ALWAYS">
+                            <Label text="Budget Range" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <ComboBox fx:id="budgetCombo" promptText="Select budget range" maxWidth="Infinity"/>
+                        </VBox>
+                    </HBox>
+                    
+                    <VBox spacing="8">
+                        <Label text="Project Details *" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                        <TextArea fx:id="projectDetailsArea" promptText="Tell us about your project, your goals, timeline..." prefRowCount="5"/>
+                    </VBox>
+                    
+                    <Button text="Send Inquiry" onAction="#onSubmit" styleClass="button-primary" style="-fx-background-radius: 4; -fx-font-size: 16px; -fx-pref-width: Infinity;"/>
+
+                </VBox>
+                
+                <!-- Alternative Methods -->
+                <VBox alignment="CENTER" spacing="10">
+                    <Label text="Prefer a different method?" styleClass="body-text"/>
+                    <HBox spacing="20">
+                         <Button text="Email Us Directly" onAction="#onEmailUs" styleClass="button-outline"/>
+                         <Button text="Schedule a Call" onAction="#onCallUs" styleClass="button-outline"/>
+                    </HBox>
+                </VBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
